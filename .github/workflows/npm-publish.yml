@@ -3,9 +3,14 @@
 
 name: Node.js Package
 
+#on:
+#  release:
+#    types: [created]
+
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - release
 
 jobs:
   build:
@@ -23,11 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Login to npm
-        run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u $NPM_ALIYUN_USERNAME -p $NPM_ALIYUN_PASSWORD -e $NPM_ALIYUN_EMAIL
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/
       - run: npm ci
+      - run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u $NPM_ALIYUN_USERNAME -p $NPM_ALIYUN_PASSWORD -e $NPM_ALIYUN_EMAIL
       - run: npm publish
