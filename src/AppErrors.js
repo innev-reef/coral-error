@@ -113,7 +113,10 @@ class InvalidArgument extends ApplicationError {
  * Error which will expose the detailed error message to end-users.
  */
 class ExposableError extends GeneralError {
-    expose = true;
+    constructor(message) {
+        super(message);
+        this.expose = true;
+    }
 }
 
 exports.GeneralError = GeneralError;

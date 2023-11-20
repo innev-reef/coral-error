@@ -3,4 +3,11 @@ const DataErrors = require('./DataErrors');
 const HttpErrors = require('./HttpErrors');
 const { StatusCodes: HttpCode } = require('http-status-codes');
 
-module.exports = { ...AppErrors, ...DataErrors, ...HttpErrors, HttpCode };
+// module.exports = {
+//     ...AppErrors,
+//     ...DataErrors,
+//     ...HttpErrors,
+//     HttpCode
+// };
+
+module.exports = Object.assign({}, AppErrors, DataErrors, HttpErrors, { HttpCode });
