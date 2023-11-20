@@ -38,5 +38,6 @@ jobs:
           node-version: 16
           registry-url: https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/
       #- run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u $NPM_USERNAME -p $NPM_PASSWORD -e $NPM_EMAIL
-      - run: npm config set https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/:_authToken=${NPM_AUTH_TOKEN}
+      #- run: npm config set https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/:_authToken=${NPM_AUTH_TOKEN}
+      - run: echo "https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/:_authToken=${NPM_USERNAME}:${NPM_PASSWORD}" > ~/.npmrc
       - run: npm publish
