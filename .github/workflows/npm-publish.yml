@@ -36,5 +36,5 @@ jobs:
         with:
           node-version: 16
           registry-url: https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/
-      - run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u $NPM_ALIYUN_USERNAME -p $NPM_ALIYUN_PASSWORD -e $NPM_ALIYUN_EMAIL
+      - run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u ${{ secrets.NPM_ALIYUN_USERNAME }} -p ${{ secrets.NPM_ALIYUN_PASSWORD }} -e ${{ secrets.NPM_ALIYUN_EMAIL }}
       - run: npm publish
