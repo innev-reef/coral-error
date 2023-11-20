@@ -7,9 +7,9 @@
         "excludePattern": "(^|\\/|\\\\)__"
     },
 	"templates" : {
-		"systemName"            : "@kbox/error",
+		"systemName"            : "@coral/error",
 		"footer"                : "",
-		"copyright"             : "Copyright (c) since 2018, GEN-X TECH PTY LTD",
+		"copyright"             : "Copyright (c) since 2023, Coral INNEV PTY LTD",
 		"includeDate"           : false,
 		"navType"               : "vertical",
 		"theme"                 : "cosmo",
