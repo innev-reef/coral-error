@@ -10,7 +10,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - release
+      - master
 
 jobs:
   build:
@@ -20,8 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: pnpm build
 
   publish-npm:
     needs: build
@@ -32,6 +31,5 @@ jobs:
         with:
           node-version: 16
           registry-url: https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry/
-      - run: npm ci
       - run: npm login --registry=https://packages.aliyun.com/600c144eb4f3e0ef1adb4efb/npm/npm-registry --always-auth -u $NPM_ALIYUN_USERNAME -p $NPM_ALIYUN_PASSWORD -e $NPM_ALIYUN_EMAIL
       - run: npm publish
