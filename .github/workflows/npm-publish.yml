@@ -26,6 +26,10 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    env:
+      NPM_ALIYUN_USERNAME: ${{ secrets.NPM_ALIYUN_USERNAME }}
+      NPM_ALIYUN_PASSWORD: ${{ secrets.NPM_ALIYUN_PASSWORD }}
+      NPM_ALIYUN_EMAIL: ${{ variables.NPM_ALIYUN_EMAIL }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
