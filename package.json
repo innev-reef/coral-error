@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+http://code.innev.cn/innev-lab/coral-error.git"
+    "url": "git+https://github.com/innev-reef/coral-error.git"
   },
   "bugs": {
-    "url": "http://code.innev.cn/innev-lab/coral-error/issues"
+    "url": "https://github.com/innev-reef/coral-error/issues"
   },
   "author": "JunzhaoSun <sunjunzhao@innev.cn>",
   "license": "MIT",
