@@ -9,7 +9,7 @@
 	"templates" : {
 		"systemName"            : "@coral/error",
 		"footer"                : "",
-		"copyright"             : "Copyright (c) since 2023, Coral INNEV PTY LTD",
+		"copyright"             : "Copyright (c) since 2023, INNEV PTY LTD",
 		"includeDate"           : false,
 		"navType"               : "vertical",
 		"theme"                 : "cosmo",
